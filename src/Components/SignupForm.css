@@ -1,0 +1,102 @@
+.signupForm{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.06),0 2px 4px 0 rgba(0, 0, 0, 0.07);
+    border-radius: 12px;
+    height: 700px;
+    max-width: 500px;
+    margin-bottom: 20px;
+    background-color: #faf0e6;
+    margin-left:35%;
+    position: relative;
+    margin-top: 20px;
+}
+.SignupScreen__info{
+    width: 80%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.87);
+}
+.SignupScreen__info > h4 {
+    font-weight: 700;
+    margin-top: 20px;
+    margin-left: 310px;
+ }
+.signupForm:hover{
+    background-color: white;
+}
+.signupForm_container{
+    padding: 50px;
+}
+.signup_section{
+    color:rgba(0, 0, 0, 0.87);
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.signup_section:nth-of-type(2){
+    margin-top: 40px;
+}
+.signup_container{
+    position: relative;
+    margin-bottom: 16px;
+}
+.signup_input{
+    width: 100%;
+}
+.signup_reward{
+    color: rgba(0, 0, 0, 0.56);
+    font-size: 14px;
+    margin: 24px 0px;
+}
+.signup_form{
+    position: relative;
+    width: 100%;
+}
+.signup_form>button{
+    margin-top: 20px;
+    position: absolute;
+    right: 0;
+}
+.signupForm_error{
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+    gap:5px;
+    font-size: smaller;
+}
+.signupForm_error> .MuiSvgIcon-root{
+    color: #e75b52;
+}
+.signup_reportError{
+    position: absolute;
+    right: 5px;
+    top:0;
+    transform: translateY(100%);
+}
+.signinScreen_visibilityIcon{
+    cursor: pointer;
+    color: gray;
+    position: absolute;
+    right: 10%;
+    top:0;
+    transform: translateY(80%);
+}
+@media(max-width:425){
+    .signupForm{
+        box-shadow: none;
+        height: 500px;
+    }
+    .signupForm_container{
+        padding: 0 20px;
+    }
+    .signup_section{
+        font-size: 16px;
+    }
+    .signup_reward{
+        font-size: 13px;
+    }
+
+}

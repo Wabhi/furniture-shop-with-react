@@ -1,24 +1,43 @@
-import logo from './logo.svg';
+import React from "react"
 import './App.css';
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import {NavBar,Sidebar,Footers} from "./Components"
+import { Home, SingleProduct, PrivateRout, About, Error, CheckOut, Product, Cart,Login,Signin } from "./Pages"
 function App() {
+  //setting routing between component to component...............................
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <NavBar />
+      <Sidebar />
+      <Switch>
+        <Route path="/" exact>
+          <Home/>
+        </Route>
+        <Route path="/about" exact>
+          <About/>
+        </Route>
+        <Route path="/cart" exact>
+          <Cart/>
+        </Route>
+        <Route path="/products" exact>
+          <Product/>
+        </Route>
+        <Route path="/product/:id" children={<SingleProduct/>}/>
+        <Route path="/checkout" exact>
+          <CheckOut/>    
+        </Route>
+        <Route path="/login" exact>
+           <Login/>
+        </Route>
+        <Route path="/signup" exact>
+           <Signin/>
+        </Route>
+        <Route path="*">
+             <Error/> 
+        </Route>
+      </Switch>
+      <Footers/>
+    </Router>
   );
 }
 
